@@ -1,0 +1,17 @@
+const reverseArray = arr => {
+    const reversedList = [];
+    for (let index = arr.length - 1; index >= 0; index--) {
+        reversedList.push(arr[index]);
+    }
+    return reversedList;
+};
+
+
+const reverseArrayInPlace = arr =>{
+    let len = Math.floor(arr.length/2);
+    for (let index = 0; index < len; index++) {
+        let temp = arr[index];
+        arr[index] = arr[len - 1 - index];
+        arr[len - 1 - index] = temp;
+    }
+}
